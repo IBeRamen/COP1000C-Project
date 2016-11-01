@@ -21,4 +21,4 @@ void howFar()
 
 	printf("You can travel %.2f miles.\n", distance);
 
-}
+} // end howFar

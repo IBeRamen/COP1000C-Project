@@ -26,5 +26,14 @@
     <ClInclude Include="dieRoller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="primeNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decToBin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tempConvert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

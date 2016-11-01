@@ -16,13 +16,23 @@ void displayCredit();
 void displayMenu();
 void flush();
 
-void showDieFace();
+void cTemp();
+void decToBin();
+void fTemp();
 void howFar();
+void showDieFace();
+void showPrime();
 
 char getSelection();
+char getTempChoice();
+
+int findPrime(int primeNum);
 
 #include "dieRoller.h"
 #include "howFar.h"
+#include "primeNumber.h"
+#include "decToBin.h"
+#include "tempConvert.h"
 
 int main()
 {
@@ -30,7 +40,9 @@ int main()
 	srand((unsigned)time(NULL));
 
 	int userSelection;
+
 	char dieFaceAgain;
+	char userTempChoice;
 
 	do
 	{
@@ -39,6 +51,7 @@ int main()
 		switch (userSelection)
 		{
 
+		// Die Roller
 		case 'A':
 
 			do
@@ -59,6 +72,7 @@ int main()
 
 			break;
 
+		// How Far
 		case 'B':
 			CLS;
 
@@ -68,27 +82,81 @@ int main()
 
 			break;
 
+		// Prime Numbers
 		case 'C':
 			CLS;
 
+			showPrime();
+
 			PAUSE;
 
 			break;
 
+		// Decimal to Binary Converter
 		case 'D':
 			CLS;
 
+			decToBin();
+
 			PAUSE;
 
 			break;
 
+		// Temperature Converter
 		case 'E':
 			CLS;
 
+			do
+			{
+				userTempChoice = getTempChoice();
+
+				switch (userTempChoice)
+				{
+
+				// Convert temperature from Celsius to Fahrenheit
+				case 'C':
+					CLS;
+
+					cTemp();
+
+					PAUSE;
+
+					break;
+
+				// Convert temperature from Fahrenheit to Celsius
+				case 'F':
+					CLS;
+
+					fTemp();
+
+					PAUSE;
+
+					break;
+
+				case 'Q':
+
+					CLS;
+
+					printf("Exiting Convert Temperature...\n");
+
+					break;
+
+				default:
+
+					printf("Invalid selection.\n");
+
+					PAUSE;
+
+					break;
+				} // end switch
+
+			} while (userTempChoice != 'Q');
+
 			PAUSE;
 
 			break;
 
+		// Display Credit
 		case 'F':
 			CLS;
 			
@@ -98,6 +166,7 @@ int main()
 
 			break;
 
+		// Quit
 		case 'Q':
 			CLS;
 
@@ -107,6 +176,7 @@ int main()
 
 			break;
 
+		// Invalid Selection
 		default:
 			printf("Invalid selection!\n");
 
@@ -114,7 +184,7 @@ int main()
 
 			break;
 
-		}
+		} // end switch
 
 	} while (userSelection != 'Q');
 
@@ -125,8 +195,8 @@ void displayCredit()
 	printf("This program was made by:\n");
 	printf("Omar Rahman: Organized team, put together the program and made How Far.\n");
 	printf("Micheal: Prime Numbers and Dice Roller.\n");
-	printf("Jacob: Decimal to Binary\n");
-	printf("Kasey: Temperature Converter\n");
+	printf("Jacob: Decimal to Binary.\n");
+	printf("Kasey: Temperature Converter.\n");
 }
 
 void displayMenu()

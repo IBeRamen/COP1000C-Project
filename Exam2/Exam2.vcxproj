@@ -113,8 +113,11 @@
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="decToBin.h" />
     <ClInclude Include="dieRoller.h" />
     <ClInclude Include="howFar.h" />
+    <ClInclude Include="primeNumber.h" />
+    <ClInclude Include="tempConvert.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
