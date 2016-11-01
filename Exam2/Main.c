@@ -1,25 +1,36 @@
 /*
 *	Project: Exam 2
 *	Authors: Omar, Micheal, Jacob and Kasey
-*	Programs included: dieRoller, howFar, primeNumber, binToDecimal and tempConvert
+*	Programs included: dieRoller, howFar, primeNumber, decimalToBinary and tempConvert
 */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #define PAUSE system("pause");
 #define CLS system("cls");
 #define FLUSH flush();
 
-void flush();
+void displayCredit();
 void displayMenu();
+void flush();
 
-int getSelection();
+void showDieFace();
+void howFar();
+
+char getSelection();
+
+#include "dieRoller.h"
+#include "howFar.h"
 
 int main()
 {
 
+	srand((unsigned)time(NULL));
+
 	int userSelection;
+	char dieFaceAgain;
 
 	do
 	{
@@ -28,87 +39,123 @@ int main()
 		switch (userSelection)
 		{
 
-		case 1:
+		case 'A':
+
+			do
+			{
+				CLS;
+
+				showDieFace();
+				showDieFace();
+
+				printf("Roll again? (Y/N) ");
+				scanf_s("%c", &dieFaceAgain);
+				
+				FLUSH;
+
+			} while (dieFaceAgain != 'N' && dieFaceAgain != 'n');
+			
+			PAUSE;
+
+			break;
+
+		case 'B':
+			CLS;
+
+			howFar();
+
+			PAUSE;
+
+			break;
+
+		case 'C':
 			CLS;
 
 			PAUSE;
 
 			break;
 
-		case 2:
+		case 'D':
 			CLS;
 
 			PAUSE;
 
 			break;
 
-		case 3:
+		case 'E':
 			CLS;
 
 			PAUSE;
 
 			break;
 
-		case 4:
+		case 'F':
 			CLS;
+			
+			displayCredit();
 
 			PAUSE;
 
 			break;
 
-		case 5:
+		case 'Q':
 			CLS;
+
+			printf("Exiting...\n");
 
 			PAUSE;
 
 			break;
 
-		case 6:
-			CLS;
-
-			PAUSE;
-
-			break;
-
-		case 7:
-			CLS;
+		default:
+			printf("Invalid selection!\n");
 
 			PAUSE;
 
 			break;
 
 		}
-	} while (userSelection != 7);
+
+	} while (userSelection != 'Q');
 
 } // end main
+
+void displayCredit()
+{
+	printf("This program was made by:\n");
+	printf("Omar Rahman: Organized team, put together the program and made How Far.\n");
+	printf("Micheal: Prime Numbers and Dice Roller.\n");
+	printf("Jacob: Decimal to Binary\n");
+	printf("Kasey: Temperature Converter\n");
+}
 
 void displayMenu()
 {
 	CLS;
 
 	printf("================ Menu =================\n");
-	printf("1) Die Roller\n");
-	printf("2) How Far\n");
-	printf("3) Prime Number\n");
-	printf("4) Binary to Decimal\n");
-	printf("5) Temperature Converter\n");
-	printf("6) Credits\n");
-	printf("7) Exit\n");
+	printf("A) Die Roller\n");
+	printf("B) How Far\n");
+	printf("C) Prime Number\n");
+	printf("D) Decimal to Binary\n");
+	printf("E) Temperature Converter\n");
+	printf("F) Credits\n");
+	printf("Q) Exit\n");
 	printf("=======================================\n");
 
 	printf("Enter selection: ");
 
 } // end displayMenu
 
-int getSelection()
+char getSelection()
 {
-	int result;
+	char result;
 
 	displayMenu();
-	scanf_s("%i", &result);
+	scanf_s("%c", &result);
 	FLUSH;
 
-	return result;
+	return toupper(result);
 } // end getSelection
 
 void flush()

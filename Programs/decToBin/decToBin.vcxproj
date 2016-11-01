@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2444C738-F106-4115-BD91-03A4EFE0EB8D}</ProjectGuid>
-    <RootNamespace>Exam2</RootNamespace>
+    <ProjectGuid>{07098ACE-51A6-4328-994E-B237179D3778}</ProjectGuid>
+    <RootNamespace>decToBin</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,11 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="dieRoller.h" />
-    <ClInclude Include="howFar.h" />
+    <ClCompile Include="decToBin.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
