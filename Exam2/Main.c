@@ -1,6 +1,6 @@
 /*
 *	Project: Exam 2
-*	Authors: Omar, Micheal, Jacob and Kasey
+*	Authors: Omar, Michael, Jacob and Kasey
 *	Programs included: dieRoller, howFar, primeNumber, decimalToBinary and tempConvert
 */
 
@@ -194,7 +194,7 @@ void displayCredit()
 {
 	printf("This program was made by:\n");
 	printf("Omar Rahman: Organized team, put together the program and made How Far.\n");
-	printf("Micheal: Prime Numbers and Dice Roller.\n");
+	printf("Michael: Prime Numbers and Dice Roller.\n");
 	printf("Jacob: Decimal to Binary.\n");
 	printf("Kasey: Temperature Converter.\n");
 }

@@ -5,7 +5,7 @@ void cTemp()
 
 	CLS;
 
-	printf("Enter the temperature for Celsius to Fahrenheit: ");
+	printf("Enter the temperature for Fahrenheit to Celsius: ");
 	scanf_s("%f", &origTemp);
 
 	FLUSH;
@@ -34,7 +34,7 @@ void fTemp()
 
 	CLS;
 
-	printf("Enter the temperature for Fahrenheit to Celsius: ");
+	printf("Enter the temperature for Celsius to Fahrenheit: ");
 	scanf_s("%f", &origTemp);
 
 	FLUSH;
