@@ -28,10 +28,7 @@ void flush()
 
 void getSelection()
 {
-	float mpg;
-	float priceOfGas;
-	float money;
-	float distance;
+	float mpg, priceOfGas, money, distance, timeStopped;
 
 	CLS;
 
@@ -49,6 +46,10 @@ void getSelection()
 	distance = (money / priceOfGas) * mpg;
 
 	printf("You can travel %.2f miles.\n", distance);
+
+	timeStopped = 20 / (money / priceOfGas);
+
+	printf("You have to stop %.2f times.\n", timeStopped - 1);
 
 	FLUSH;
 

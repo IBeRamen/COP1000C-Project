@@ -1,10 +1,7 @@
 void howFar()
 {
-	float mpg;
-	float priceOfGas;
-	float money;
-	float distance;
-	float timeStop;
+
+	float mpg, priceOfGas, money, distance, timeStopped;
 
 	printf("Enter your average MPG: ");
 	scanf_s("%f", &mpg);
@@ -16,14 +13,14 @@ void howFar()
 
 	printf("How much money is on you now? ");
 	scanf_s("%f", &money);
-	FLUSH;
 
 	distance = (money / priceOfGas) * mpg;
-	timeStop = distance / mpg;
 
 	printf("You can travel %.2f miles.\n", distance);
 
-	// TODO: Add times to stop for gas
+	timeStopped = 20 / (money / priceOfGas);
+
+	printf("You have to stop %.2f times.\n", timeStopped - 1);
 	
 
 } // end howFar
